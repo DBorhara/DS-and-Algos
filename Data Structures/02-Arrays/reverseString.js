@@ -1,0 +1,26 @@
+//Create a function that reverses a given string
+//Google => elgooG
+
+function reverse(str) {
+  if (!str || str.length < 2 || typeof str !== 'string') {
+    return 'not available to reverse string';
+  }
+
+  const backwards = [];
+  const totalItems = str.length - 1;
+
+  for (let i = totalItems; i >= 0; i--) {
+    backwards.push(str[i]);
+  }
+
+  return backwards.join('');
+}
+
+function reverse2(str) {
+  console.log(str.split('').reverse().join(''));
+  return str.split('').reverse().join('');
+}
+
+const reverse3 = str => [...str].reverse().join('');
+
+reverse3('Google');
